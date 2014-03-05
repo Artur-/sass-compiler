@@ -1,11 +1,26 @@
-This project compiles SCSS into CSS.
-It parses the SCSS into a tree.
+A pure Java implementation of the http://sass-lang.com compiler
+Previously has been a part of the Vaadin Framework
 
-Classes
-=======
-SassCompiler: This is the main class that can be run from command line. First parameter is for a scss file to be compiled. Second parameter is optional and is a reference to a file where you want the compiled css. If file doesn't exist, it will be deleted. If file exists, it will be deleted and recreated. If second argument is left out, the css will be printed into standard out.
-ScssStylesheet: When Scss/Css is parsed in, it will be represented in memory as this file. Reference is got through static get(File file) where file is input.
-Parser: A JavaCC compiled java class that parses the input and notifies the DocumentHandler on what nodes it encounters.
-Parser.jj: Source for the Parser class.
-SCSSDocumentHandlerImpl: Class that takes in calls from parser and creates nodes into ScssStylesheet based on those calls.
-Node package: All the nodes representing the Scss/Css in tree format
+Roadmap
+Sass Compiler 1.0 
+* Compatibility with sass-lang compiler 3.2.12
+
+Sass Compiler 1.1
+* Compatibility with sass-lang compiler 3.3.0
+
+Setting up the project
+====================
+
+The project can be imported into Eclipse or simply compiled using
+
+mvn package
+
+
+Tests
+=====
+There is an extensive test suite consisting of sources scss and expected css
+output imported from the sass-lang project. Today the features required by
+the tests in src/test/resources/sasslang are fully implemented while the
+tests in src/test/resources/sasslangbroken are currently expected to fail.
+When reaching 1.0 the sasslangbroken package should no longer exist.
+
