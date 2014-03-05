@@ -24,3 +24,8 @@ the tests in src/test/resources/sasslang are fully implemented while the
 tests in src/test/resources/sasslangbroken are currently expected to fail.
 When reaching 1.0 the sasslangbroken package should no longer exist.
 
+Contributing
+=============
+Your contributions are more than welcome. Please read
+https://vaadin.com/contribute for more information on practicalities.
+Because we are using Gerrit we cannot accept pull requests in GitHub.
